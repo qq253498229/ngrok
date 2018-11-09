@@ -34,7 +34,7 @@ spec:
               value: "ngrok.codeforfun.cn"
           volumeMounts:
             - mountPath: /myfiles
-              name: /myfiles
+              name: myfiles
           livenessProbe:
             httpGet:
               path: /
