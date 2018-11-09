@@ -27,6 +27,14 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
+          command:
+            - "/bin/sh /build.sh"
+          env:
+            - name: DOMAIN
+              value: "ngrok.codeforfun.cn"
+          volumeMounts:
+            - mountPath: /myfiles
+              name: /myfiles
           livenessProbe:
             httpGet:
               path: /
